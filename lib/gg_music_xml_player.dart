@@ -1,8 +1,3 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
-library gg_music_xml_player;
-
 // Export timeline
 export 'package:gg_timeline/gg_timeline.dart';
 // Export music xml lib

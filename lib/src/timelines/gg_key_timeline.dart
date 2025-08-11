@@ -16,9 +16,7 @@ typedef GgKeySignatureItem = GgTimelineItem<KeySignature>;
 /// Generates items for chords
 class GgKeyTimeline extends GgTimeline<KeySignature> {
   /// Constructor
-  GgKeyTimeline({
-    required this.part,
-  }) {
+  GgKeyTimeline({required this.part}) {
     _init();
   }
 

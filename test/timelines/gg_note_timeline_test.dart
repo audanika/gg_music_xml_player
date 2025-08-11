@@ -40,8 +40,9 @@ void main() {
       });
 
       test('should load ties correctly', () {
-        final itemGenerator =
-            GgNoteTimeline(part: ggExampleMusicXmlTiedNote.parts.first);
+        final itemGenerator = GgNoteTimeline(
+          part: ggExampleMusicXmlTiedNote.parts.first,
+        );
         expect(itemGenerator.items.length, 4);
 
         // The tied duration of the notes should span three measures
@@ -74,10 +75,7 @@ void main() {
 
         // Check exact positions of items
         void checkTimePosition(GgNoteItem item) {
-          expect(
-            item,
-            timeline.item(item.validFrom),
-          );
+          expect(item, timeline.item(item.validFrom));
         }
 
         checkTimePosition(items[0]);

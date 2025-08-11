@@ -7,8 +7,9 @@
 import 'package:music_xml/music_xml.dart';
 
 /// Example music xml wide range
-final ggExampleMusicXmlWideRange =
-    MusicXmlDocument.parse(ggExampleMusicXmlWideRangeString);
+final ggExampleMusicXmlWideRange = MusicXmlDocument.parse(
+  ggExampleMusicXmlWideRangeString,
+);
 
 /// Example music xml wide range
 const ggExampleMusicXmlWideRangeString = '''

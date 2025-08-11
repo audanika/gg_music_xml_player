@@ -7,8 +7,9 @@
 import 'package:music_xml/music_xml.dart';
 
 /// Example music xml without chord
-final ggExampleMusicXmlWithoutChord =
-    MusicXmlDocument.parse(ggExampleMusicXmlWithoutChordString);
+final ggExampleMusicXmlWithoutChord = MusicXmlDocument.parse(
+  ggExampleMusicXmlWithoutChordString,
+);
 
 /// Example music xml without chord
 const ggExampleMusicXmlWithoutChordString = '''

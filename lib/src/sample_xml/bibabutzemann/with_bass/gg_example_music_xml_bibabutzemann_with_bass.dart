@@ -1,8 +1,9 @@
 import 'package:music_xml/music_xml.dart';
 
 /// Uses https://github.com/inlavigo/gg_music_xml_player/blob/develop/lib/src/sample_xml/example_music_xml_doc/example_music_xml_doc.png
-final ggExampleMusicXmlBibabutzemannWithBass =
-    MusicXmlDocument.parse(ggExampleMusicXmlBibabutzemannWithBassString);
+final ggExampleMusicXmlBibabutzemannWithBass = MusicXmlDocument.parse(
+  ggExampleMusicXmlBibabutzemannWithBassString,
+);
 
 /// Bibabutzemann Song
 const ggExampleMusicXmlBibabutzemannWithBassString = '''

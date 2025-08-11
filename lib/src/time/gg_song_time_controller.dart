@@ -67,10 +67,7 @@ class GgSongTimeController {
       return;
     }
 
-    timeController = tc ??
-        GgTimeController(
-          onTimeStamp: (p0) {},
-        );
+    timeController = tc ?? GgTimeController(onTimeStamp: (p0) {});
 
     _dispose.add(timeController.dispose);
   }
@@ -81,8 +78,7 @@ class GgSongTimeController {
 GgSongTimeController exampleGgSongTimeController({
   MusicXmlDocument? document,
   GgTimeController? timeController,
-}) =>
-    GgSongTimeController(
-      musicXmlDocument: document ?? ggExampleMusicXmlBibabutzemannWithBass,
-      timeController: timeController,
-    );
+}) => GgSongTimeController(
+  musicXmlDocument: document ?? ggExampleMusicXmlBibabutzemannWithBass,
+  timeController: timeController,
+);

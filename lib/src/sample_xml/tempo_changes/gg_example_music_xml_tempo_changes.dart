@@ -3,8 +3,9 @@ import 'package:music_xml/music_xml.dart';
 /// Uses https://github.com/inlavigo/gg_music_xml_player/blob/develop/lib/src/sample_xml/key_changes/example_music_xml_with_key_change.png
 
 /// Example music xml with tempo changes
-final ggExampleMusicXmlWithTempoChanges =
-    MusicXmlDocument.parse(ggExampleMusicXmlWithTempoChangesString);
+final ggExampleMusicXmlWithTempoChanges = MusicXmlDocument.parse(
+  ggExampleMusicXmlWithTempoChangesString,
+);
 
 /// Example music xml with tempo changes
 const ggExampleMusicXmlWithTempoChangesString = '''

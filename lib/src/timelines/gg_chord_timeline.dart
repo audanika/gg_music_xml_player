@@ -16,9 +16,7 @@ typedef GgChordItem = GgTimelineItem<ChordSymbol>;
 /// Generates items for chords
 class GgChordTimeline extends GgTimeline<ChordSymbol> {
   /// Constructor
-  GgChordTimeline({
-    required this.part,
-  }) {
+  GgChordTimeline({required this.part}) {
     _init();
   }
 

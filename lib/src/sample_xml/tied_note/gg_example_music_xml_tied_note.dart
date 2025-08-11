@@ -7,8 +7,9 @@
 import 'package:music_xml/music_xml.dart';
 
 /// Example music xml with a tied note
-final ggExampleMusicXmlTiedNote =
-    MusicXmlDocument.parse(ggExampleMusicXmlTiedNoteString);
+final ggExampleMusicXmlTiedNote = MusicXmlDocument.parse(
+  ggExampleMusicXmlTiedNoteString,
+);
 
 /// Example music xml with a tied note
 const ggExampleMusicXmlTiedNoteString = '''

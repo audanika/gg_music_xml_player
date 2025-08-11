@@ -1,8 +1,9 @@
 import 'package:music_xml/music_xml.dart';
 
 /// Empty music xml
-final ggExampleMusicXmlEmpty =
-    MusicXmlDocument.parse(ggExampleMusicXmlEmptyString);
+final ggExampleMusicXmlEmpty = MusicXmlDocument.parse(
+  ggExampleMusicXmlEmptyString,
+);
 
 /// Empty example music xml
 const ggExampleMusicXmlEmptyString = '''

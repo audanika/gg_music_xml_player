@@ -36,9 +36,7 @@ class GgNoteTimeline extends GgTimeline<List<Note>> {
   // ...........................................................................
   /// - [part] is the document the items are generated for
   /// - [frameDuration] the time window considered for the item
-  GgNoteTimeline({
-    required this.part,
-  }) {
+  GgNoteTimeline({required this.part}) {
     _init();
   }
 
@@ -114,15 +112,11 @@ class GgNoteTimeline extends GgTimeline<List<Note>> {
       }
     }
 
-    return noteEvents
-      ..sort(
-        (a, b) => a.timePosition.compareTo(b.timePosition),
-      );
+    return noteEvents..sort((a, b) => a.timePosition.compareTo(b.timePosition));
   }
 }
 
 // #############################################################################
 /// Example note timeline for test purposes
-GgNoteTimeline exampleNoteTimeline() => GgNoteTimeline(
-      part: ggExampleMusicXmlBibabutzemannWithBass.parts.first,
-    );
+GgNoteTimeline exampleNoteTimeline() =>
+    GgNoteTimeline(part: ggExampleMusicXmlBibabutzemannWithBass.parts.first);

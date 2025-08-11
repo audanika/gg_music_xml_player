@@ -2,8 +2,9 @@ import 'package:music_xml/music_xml.dart';
 
 /// Uses https://github.com/inlavigo/gg_music_xml_player/blob/develop/lib/src/sample_xml/key_changes/example_music_xml_with_key_change.png
 
-final ggExampleMusicXmlWithKeyChanges =
-    MusicXmlDocument.parse(ggExampleMusicXmlWithKeyChangesString);
+final ggExampleMusicXmlWithKeyChanges = MusicXmlDocument.parse(
+  ggExampleMusicXmlWithKeyChangesString,
+);
 
 /// Music xml with key changes
 const ggExampleMusicXmlWithKeyChangesString = '''
