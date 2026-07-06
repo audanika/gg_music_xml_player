@@ -16,6 +16,8 @@ const ggExampleMusicXmlEmptyString = '''
       <part-abbreviation></part-abbreviation>
     </score-part>
   </part-list>
-  <part id="P1"></part>
+  <part id="P1">
+    <measure number="1"></measure>
+  </part>
 </score-partwise>
 ''';

@@ -6,6 +6,10 @@
 
 - Add .gitattributes file
 
+### Changed
+
+- Update to latest dependencies
+
 ## [1.0.2] - 2024-04-13
 
 ### Removed

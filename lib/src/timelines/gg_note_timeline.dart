@@ -118,5 +118,6 @@ class GgNoteTimeline extends GgTimeline<List<Note>> {
 
 // #############################################################################
 /// Example note timeline for test purposes
-GgNoteTimeline exampleNoteTimeline() =>
-    GgNoteTimeline(part: ggExampleMusicXmlBibabutzemannWithBass.parts.first);
+GgNoteTimeline exampleNoteTimeline() => GgNoteTimeline(
+  part: ggExampleMusicXmlBibabutzemannWithBass.score.parts.first,
+);

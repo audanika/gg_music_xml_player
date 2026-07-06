@@ -60,5 +60,5 @@ class GgChordTimeline extends GgTimeline<ChordSymbol> {
 // #############################################################################
 /// Example chord timeline for test purposes
 final exampleGgChordTimeline = GgChordTimeline(
-  part: ggExampleMusicXmlBibabutzemannWithBass.parts.first,
+  part: ggExampleMusicXmlBibabutzemannWithBass.score.parts.first,
 );

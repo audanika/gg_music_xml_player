@@ -41,7 +41,7 @@ void main() {
 
       test('should load ties correctly', () {
         final itemGenerator = GgNoteTimeline(
-          part: ggExampleMusicXmlTiedNote.parts.first,
+          part: ggExampleMusicXmlTiedNote.score.parts.first,
         );
         expect(itemGenerator.items.length, 4);
 

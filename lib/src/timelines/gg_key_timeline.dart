@@ -7,14 +7,22 @@
 import 'package:collection/collection.dart';
 import 'package:gg_timeline/gg_timeline.dart';
 import 'package:music_xml/music_xml.dart';
+// ignore: implementation_imports
+import 'package:music_xml/src/elements/part/measure/attributes/key/fifths.dart';
 
 import '../sample_xml/key_changes/gg_example_music_xml_key_changes.dart';
 
 /// A key signature
-typedef GgKeySignatureItem = GgTimelineItem<KeySignature>;
+typedef GgKeySignatureItem = GgTimelineItem<Key>;
+
+/// Returns the last key signature defined in the measure's attributes, if any
+Key? _keySignatureOf(Measure measure) => measure.attributesList
+    .lastWhereOrNull((attributes) => attributes.keys.isNotEmpty)
+    ?.keys
+    .last;
 
 /// Generates items for chords
-class GgKeyTimeline extends GgTimeline<KeySignature> {
+class GgKeyTimeline extends GgTimeline<Key> {
   /// Constructor
   GgKeyTimeline({required this.part}) {
     _init();
@@ -26,11 +34,15 @@ class GgKeyTimeline extends GgTimeline<KeySignature> {
 
   // ...........................................................................
   @override
-  KeySignature get seed =>
-      part.measures
-          .firstWhereOrNull((element) => element.keySignature != null)
-          ?.keySignature ??
-      KeySignature(); // coverage:ignore-line
+  Key get seed {
+    for (final measure in part.measures) {
+      final keySignature = _keySignatureOf(measure);
+      if (keySignature != null) {
+        return keySignature;
+      }
+    }
+    return Key(fifths: Fifths(0)); // coverage:ignore-line
+  }
 
   // ######################
   // Private
@@ -39,10 +51,11 @@ class GgKeyTimeline extends GgTimeline<KeySignature> {
   // ...........................................................................
   void _init() {
     for (final measure in part.measures) {
-      if (measure.keySignature != null) {
+      final keySignature = _keySignatureOf(measure);
+      if (keySignature != null) {
         addOrReplaceItem(
-          timePosition: measure.keySignature!.timePosition,
-          data: measure.keySignature!,
+          timePosition: keySignature.timePosition,
+          data: keySignature,
         );
       }
     }
@@ -54,5 +67,5 @@ class GgKeyTimeline extends GgTimeline<KeySignature> {
 // #############################################################################
 /// Example key timeline for test purposes
 final exampleGgKeyTimeline = GgKeyTimeline(
-  part: ggExampleMusicXmlWithKeyChanges.parts.first,
+  part: ggExampleMusicXmlWithKeyChanges.score.parts.first,
 );

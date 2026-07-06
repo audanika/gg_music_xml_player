@@ -24,7 +24,7 @@ void main() {
         expect(firstItem.validFrom, 0);
         expect(firstItem.validTo, 4.0);
         expect(firstItem.duration, 4.0);
-        expect(firstItem.data.mode, 'major');
+        expect(firstItem.data.mode?.mode, 'major');
         expect(timeline.item(time(bar: 0)), firstItem);
 
         final secondItem = timeline.items[1];
@@ -32,14 +32,14 @@ void main() {
         expect(secondItem.validTo, 8.0);
         expect(secondItem.duration, 4.0);
         expect(secondItem.data.key, 2);
-        expect(secondItem.data.mode, 'major');
+        expect(secondItem.data.mode?.mode, 'major');
         expect(timeline.item(time(bar: 2)), secondItem);
 
         final thirdItem = timeline.items[2];
         expect(thirdItem.validFrom, 8.0);
         expect(thirdItem.validTo, 8.0); // Check
         expect(thirdItem.duration, 0.0); // Check
-        expect(thirdItem.data.mode, 'major');
+        expect(thirdItem.data.mode?.mode, 'major');
         expect(timeline.item(time(bar: 4)), thirdItem);
         expect(timeline.item(time(bar: 4)), thirdItem);
       });
