@@ -9,6 +9,7 @@
 ### Changed
 
 - Update to latest dependencies
+- Check everything with »gg can commit«
 
 ## [1.0.2] - 2024-04-13
 
