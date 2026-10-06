@@ -5,7 +5,7 @@
       "name": "base",
       "package": "helix",
       "ecosystem": null,
-      "resolvedVersion": "1.9.0",
+      "resolvedVersion": "1.11.0",
       "via": null,
       "hash": "0x6883da335b415f9d"
     },
@@ -94,7 +94,7 @@
     "claudeMdInclude": null,
     "claudeMdFromDna": true
   },
-  "baseVersion": "1.9.0",
+  "baseVersion": "1.11.0",
   "baseHash": "0x6883da335b415f9d",
   "instances": [
     {
