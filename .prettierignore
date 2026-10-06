@@ -1,0 +1,25 @@
+# Ignore artifacts
+build
+coverage
+.gg
+CHANGELOG.md
+
+# Dart is formatted by the Dart formatter, not by prettier.
+**/*.dart
+pubspec.yaml
+test/goldens/**
+
+# The node scripts the DNA ships are generated, not edited here.
+**/*.js
+
+# Files the DNA generates. They must match the generated originals byte
+# for byte — a formatter rewriting them would make every test run back
+# them up and overwrite them again.
+dna/
+doc/
+.vscode/
+.claude/
+scripts/
+
+# Lockfiles
+pubspec.lock
