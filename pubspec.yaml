@@ -23,7 +23,9 @@ dependencies:
 
 dev_dependencies:
   args: ^2.7.0
+  dna_audanika: ^0.0.1
   gg_capture_print: ^1.0.9
+  helix: ^1.11.0
   lints: ^6.1.0
   mocktail: ^1.0.5
   test: ^1.31.2
